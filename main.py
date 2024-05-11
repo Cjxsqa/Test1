@@ -61,7 +61,7 @@ pr = json.loads(response.text)["streamingData"]["hlsManifestUrl"]
 #print(pr)
 
 
-os.system(f"ffmpeg -re -i \"{pr}\" -map 0:p:14 -c:v libx264 -b:v 9000k -c:a aac -g 30 -b:a 512k -f flv rtmp://a.rtmp.youtube.com/live2/j32f-zj48-1axx-m9g1-1zms")
+os.system(f"ffmpeg -re -i \"{pr}\" -map 0:p:13 -c:v libx264 -b:v 8000k -c:a aac -g 30 -b:a 512k -f flv rtmp://a.rtmp.youtube.com/live2/j32f-zj48-1axx-m9g1-1zms")
 
 
 
